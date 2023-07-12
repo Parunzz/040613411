@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai herb</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section class="Topic">
+            <div class="Title">
+                <h1>สมุนไพรไทย 22 ชนิด</h1>
+                <h2>เสี่ยง สูญพันธุ์</h2>
+                <h3>ประกาศคุ้มครองและควบคุม 7 ชนิด</h3>
+            </div>
+    </section>
+
+    <section class="Info">
+
+        <div class="Info-cause" >
+            <p class="cause" id="Caus">เหตุเติบโตช้า เมื่อใช้ต้องใช้ทั้งต้น หรือทั้งราก หรือใช้บ่อยจึงรักษาได้</p>
+            <p id = "dicname"class="name">นายนันทศักดิ์ โชติชนะเดชาวงศ์ ผู้อำนวยการกองคุ้มครองภูมิปัญญาการแพทย์แผนไทยและพื้นบ้านไทย กรมพัฒนาการแพทย์แผนไทยและการแพทย์ทางเลือก กระทรวงสาธารณสุข (สธ.) กล่าว</p>
+        </div>
+
+        <div class="ExHerbTopic" id="ExHerbinfo">
+            <p>คณะกรรมการคุ้มครองและส่งเสริมภูมิปัญญาการแพทย์แผนไทยได้ประชุมหารือกัน โดยเลือกสมุนไพร 6 ชนิดจาก 22 ชนิดขึ้นมา
+                 นอกจากนี้ ยังเสนอสมุนไพร “กระวาน” ขึ้นมาเป็นพิเศษด้วยอีกชนิดหนึ่งพื่อประกาศคุ้มครองและเป็นสมุนไพรที่ต้องควบคุม </p>
+            <p>โดยหากใครมีสมุนไพร 7 ตัวนี้อยู่ในครอบครองไม่ได้ถือว่ามีความผิด </p>
+            <p>เพียงแต่ต้องแจ้งมาทาง สธ. ให้รับทราบว่ามีอยู่เท่าใด เพื่อที่จะจัดทำแผนส่งเสริมการปลูกต่อไป เช่น บริษัทใดมีสมุนไพร 7 นี้อยู่ ใช้ผลิตยาไปเท่าใด ต้องปลูกทดแทนเท่าใด เพื่อไม่ให้สูญพันธุ์</p>
+        </div>
+
+        <div class="wrapper" >
+            <div class="link_wrapper">
+              <a id="textButton" onclick="myfunc() & changetext()">READ MORE</a>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                  <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+                </svg>
+              </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
+    
+    <div class="all-herb">
+        <div class="herb-name">
+            <h1> รายชื่อสมุนไพรไทย 22 ชนิด ที่เสี่ยงอาจจะสูญพันธุ์ </h1>
+            <p>กดเพื่อเลือกดู 7 สมุนไพรไทย ที่ประกาศคุ้มครองและควบคุม</p>
+        </div>
+        
+        <input type="checkbox" class="toggle-switch" id="myCheckbox" onchange="toggleCheck()">
+
+        <section class="herb-info">
+            <div class="herb">
+                <!-- <img class="herb" src="https://lh3.googleusercontent.com/-IfUGdZv6L-A/XFLX4g2aECI/AAAAAAAAG2c/yhn0JaZDG7Eo4i3tlbXLes4_xIofTle3QCHMYCw/s280/%255BUNSET%255D" alt=""> -->
+                <img class="exherb" id="exherb" src="https://lh3.googleusercontent.com/-IfUGdZv6L-A/XFLX4g2aECI/AAAAAAAAG2c/yhn0JaZDG7Eo4i3tlbXLes4_xIofTle3QCHMYCw/s280/%255BUNSET%255D" alt="">
+                <p>
+                    ถั่วดินโคก
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="exherb" src="https://www.disthai.com/images/content/original-1650683428621.jpg" alt="">
+                <p>
+                    เทพทาโร
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="exherb" src="https://www.matichonweekly.com/wp-content/uploads/2017/01/4%E0%B8%A1%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A11.jpg" alt="">
+                <p>
+                    มะตูมนิ่ม
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="exherb" src="https://www.bloggang.com/data/g/goirish2011/picture/1364000587.jpg" alt="">
+                <p>
+                    มะหาด
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="exherb" src="https://apps.phar.ubu.ac.th/thaicrudedrug/userfiles/image/tcd117_Rew/tcd117_02.JPG" alt="">
+                <p>
+                    เร่ว
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="exherb" src="https://thai-herbs.thdata.co/mydear_cover/thdata_%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%A3%E0%B8%B91.jpg" alt="">
+                <p>
+                    หัวร้อยรู
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2015/06/%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%99%E0%B8%B2.jpg" alt="">
+                <p>
+                    กระทุ่มนา
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://arit.kpru.ac.th/ap2/local/contents/Herbs_kpp/thumbs/thumb_4.webp" alt="">
+                <p>
+                    ขันทองพยาบาท
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/03/%E0%B8%88%E0%B8%B8%E0%B8%81%E0%B9%82%E0%B8%A3%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%B5.jpg" alt="">
+                <p>
+                    จุกโรหินี
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2013/11/%E0%B8%8A%E0%B8%B0%E0%B9%80%E0%B8%AD%E0%B8%A1%E0%B9%84%E0%B8%97%E0%B8%A21.jpg" alt="">
+                <p>
+                    ชะเอมไทย
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/03/%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%8A%E0%B8%B5%E0%B9%88.jpg" alt="">
+                <p>
+                    ชิงชี่
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://www.samunpri.com/wp-content/uploads/2018/12/Hydrocharis-morsus-ranae.jpg" alt="">
+                <p>
+                    ตับเต่า
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/03/%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B9%89%E0%B8%A1%E0%B8%9B%E0%B9%88%E0%B8%B2.jpg" alt="">
+                <p>
+                    นางแย้มป่า
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://thai-herbs.thdata.co/mydear_blog/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%80%E0%B8%9C%E0%B8%B7%E0%B8%AD%E0%B8%8108.jpg" alt="">
+                <p>
+                    ปลาไหลเผือก
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2013/12/%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B51.jpg" alt="">
+                <p>
+                    พังคี
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/11/%E0%B8%9C%E0%B8%A5%E0%B8%A1%E0%B8%B0%E0%B8%84%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87.jpg" alt="">
+                <p>
+                    มะคังแดง
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://apps.phar.ubu.ac.th/thaicrudedrug/userfiles/image/tcd181_Sakan/tcd181_001.jpg" alt="">
+                <p>
+                    สะค้าน
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/10/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B5%E0%B8%9B%E0%B9%88%E0%B8%B2.jpg" alt="">
+                <p>
+                    สารภีป่า
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://www.palangkaset.com/wp-content/uploads/2018/10/1.%E0%B9%83%E0%B8%9A-%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%8A%E0%B8%A2.jpg" alt="">
+                <p>
+                    อบเชยไทย
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://apps.phar.ubu.ac.th/phargarden/userfiles/image/images/ph222_Chiengpranangaee/ph222_007.jpg" alt="">
+                <p>
+                    เฉียงพร้านางแอ
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://medthai.com/wp-content/uploads/2014/03/%E0%B8%9C%E0%B8%A5%E0%B9%80%E0%B8%96%E0%B8%B2%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99.jpg" alt="">
+                <p>
+                    เถาเอ็นอ่อน
+                </p>
+            </div>
+            <div class="herb">
+                <img src="https://www.health2click.com/wp-content/uploads/2019/01/%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%99%E0%B9%84%E0%B8%9E%E0%B8%A3%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B8%AD%E0%B8%A1%E0%B8%A1%E0%B8%B5%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%A2%E0%B8%8A%E0%B8%99%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3.jpg" alt="">
+                <p>
+                    เปราะหอม
+                </p>
+            </div>
+            <div class="herb">
+                <img class="exherb" id="otherherb" src="https://www.disthai.com/images/content/original-1634717405575.jpg" alt="">
+                <p id="otherherbtext">
+                    กระวาน
+                </p>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+
+<script>
+    function myfunc() {
+        var x = document.getElementById("Caus");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function changetext() {
+      var button = document.getElementById("textButton");
+      var info = document.getElementById("ExHerbinfo");
+      console.log(button.textContent);
+      if (button.textContent == "READ MORE") {
+        info.style.display = "block";
+        button.textContent = "Go Back";
+      } else{
+        info.style.display = "none";
+        button.textContent = "READ MORE";
+      }
+    }
+
+  </script>
+</html>

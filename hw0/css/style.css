@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+*{
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: calc(8px + 1vw - 10%);
+}
+img{
+    width: 30rem;
+}
+.Topic{
+    background-image: url(img/Wallpaper.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover  ;
+    
+}
+.Topic img{
+    position: absolute;
+    bottom: -5%;
+    right: 0%;
+    width: 30%;
+    size: 100px;
+}
+.Title{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 60%;
+    /* color: #000000;
+    text-shadow: 1px 1px 2px rgb(255, 201, 180), 0 0 25px rgb(255, 169, 169), 0 0 5px rgb(253, 219, 157); */
+}
+
+.Title h1{
+    
+    font-size: 2rem;
+    width: 60%;
+}
+.Title h2{
+    font-size: 3rem;
+    position: relative;
+    top: 20px;
+    width: 60%;
+    animation: 2s title ease infinite;
+}
+@keyframes title{
+    0% {
+      color: black;
+      transform: scale(1);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: red;
+      transform: scale(1.5);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+}
+  
+.Title h3{
+    font-size: 2rem;
+    position: relative;
+    top: 50px;
+    width: 60%;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+}
+.Info{
+    position: relative;
+    background-image: url(img/doctor.jpg);
+    height: 110vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.Info-cause{
+    position: relative;
+    top: 20%;
+    left: 40%;
+    width: 50%;
+}
+.cause{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(72, 170, 110), 0 0 5px rgb(2, 121, 12);
+    
+}
+.name{
+    color: rgb(247, 247, 247);
+    position: absolute;
+    top:450px;
+    right: 0%;
+    width: 90%;
+    font-size: 0.7rem;
+}
+.wrapper{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.link_wrapper{
+    position: relative;
+}
+a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+}
+  
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+}
+  
+.icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all .35s;
+}
+
+a:hover{
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+}
+  
+ a:hover + .icon{
+    border: 3px solid #2ecc71;
+    right: -25%;
+}
+
+
+.herb-info{
+    position: relative;
+    top: 80px;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    
+    grid-template-columns: repeat(5,1fr);
+    
+}
+@media screen and (max-width: 1000px) {
+    .herb-info{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (max-width: 800px) {
+    .herb-info{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .herb-info{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 480px) {
+    .herb-info{
+        grid-template-columns: 1fr;
+    }
+}
+.ExHerbTopic{
+    position: relative;
+    top: 20%;
+    left: 40%;
+    width: 50%;
+    display: none;
+    font-size: 1rem;
+    color: #ffffff;
+}
+.herb img{
+    /* border: 1px solid #000000; */
+    border-radius: 10px;
+    /* border-style: initial; */
+    padding: 5px;
+    width: 150px;
+    width: 70%;
+    height: 85%;
+    size: 10px;
+    transition: width 2s, height 2s ease-in-out;
+}
+.herb img:hover   {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2px 2px rgba(95, 95, 95, 0.5);
+  }
+.herb{
+    text-align: center;
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+}
+.herb-name{
+    border-color: #ffffff;
+    border-style: solid;
+    background-color: #ffffff;
+}
+.herb-name h1{
+    position: relative;
+    top: 40px;
+    height: 80px;
+    font-size: 1.5rem;
+    text-align: center;
+    /* background-image: linear-gradient(
+        -225deg,
+        #970000 0%,
+        #b6a619 29%,
+        #5faf1d 67%,
+        #000a92 110%
+    );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #000000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block; */
+    
+}
+.herb-name p{
+    position: relative;
+    top: 80px;
+    height: 50px;
+    font-size: 1rem;
+    text-align: left;
+    left: 5%;
+}
+
+.all-herb{
+    position: relative;
+    height: 200vh;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+
+}
+.toggle-switch::hover ~ .herb-name p{
+    font-size: 2rem;
+}
+input[type=checkbox].toggle-switch {
+    font-size: 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 7em;
+    height: 3em;
+    border-radius: 3em;
+    background-color: #ddd;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.09s ease-in-out;
+    position: relative;
+    left: 50%;
+    top: 30px;
+}
+
+input[type=checkbox].toggle-switch:checked {
+    background-color: rgb(7, 112, 42);
+    
+}
+
+input[type=checkbox].toggle-switch::after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    border-radius: 3em;
+    position: absolute;
+    transform: scale(0.7);
+    left: 0;
+    transition: left 500ms ease-in-out;
+    box-shadow: 0 0.1em rgba(0, 0, 0, 0.5);
+}
+
+input[type=checkbox].toggle-switch:checked::after {
+    left: 4em;
+    
+}
+
+.exherb {
+    border: none;
+    transition: border-color 0.3s ease-in-out;
+}
+  
+.toggle-switch:checked ~ .herb-info .exherb {
+    border: 5px solid #f80000;
+    border-radius: 10px;
+}
+.toggle-switch:checked ~ .herb-info #otherherb {
+    opacity: 1; 
+}
+.toggle-switch:checked ~ .herb-info #otherherbtext {
+    opacity: 1; 
+}
+#otherherb {
+    opacity: 0;
+}
+#otherherbtext{
+    opacity: 0;
+}
