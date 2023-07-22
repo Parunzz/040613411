@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-color: rgb(56, 56, 56);
+            border-style: solid;
+            border-radius: 1px;
+        }
+        tr,th{
+            border: 2px solid #000000;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="hw2_no3_logout.html" >
+
+        <table>
+            <tr>
+                <th>Username:</th>
+                <th><input type="text"></th>
+            </tr>
+    
+            <tr>
+                <th>Password:</th>
+                <th><input type="password"></th>
+            </tr>
+    
+            <tr>
+                <th colspan="2">กรุณาพิมพ์ตามที่คัวเลขปราากฎ:
+                    <br>1559 <br>
+                    <!-- <input type="text" name="number" id="number" pattern="{1,15}" title="error"> -->
+                    <input  type="text"
+                    name="1559"
+                    pattern="1559"
+                    title="worng number" required>
+                </th>
+                
+            </tr>
+        </table>
+        <br><br><br>
+        <input type="submit" value="Login" >
+    </form>
+</body>
+</html>

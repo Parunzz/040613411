@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border-style: solid;
+            border-color: black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>แบบฟอร์มจองทัวร์</h3>
+    <form action="form-echo.php">ข้อมูลทั่วไป<br><br>
+        <label for="fname">ชื่อ-สกุน:</label><br>
+        <input  type="text" name="name" placeholder="กรอกชื่อ-สกุน">
+        <label>*</label><br>
+        <label for="email">Email:</label><br>
+        <input  type="email" name="email">
+        <label>*</label><br>
+        <label for="number">โทรศัพท์:</label><br>
+        <input  type="text" name="number">
+        <label>*</label><br>
+        <label for="address">ที่อยู่:</label><br>
+        <textarea name="address"></textarea><br>
+        <label for="address">รหัสไปรษณีย์:</label>
+        <input type="text" size="6"><br>
+        <label for="img">รูปผู้จอง:</label>
+        <input type="file" >
+    </form>
+
+    <form action="form-echo.php">ข้อมูลเข้าสู่ระบบ<br><br>
+        <label for="username">Username:</label><br>
+        <input type="text"><br>
+        <em><label>ประกอบด้วยตัวเลข หรือ _ตั้งแต่ 8 ตัวขึ้นไป</label></em><br><br>
+        
+        <label for="Password">Password:</label><br>
+        <input type="password"><br>
+        <em><label>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</label></em><br>
+    </form>
+
+    <form action="form-echo.php">ข้อมูลทัวร์ที่ต้องการ<br><br>
+        <label>แพคเก็จทัวร์:</label>
+        <select name="package">
+            <option value="1">--select--</option>
+        </select><br>
+        <label for="date">วันที่เดินทาง:"</label>
+        <input type="date"><br>
+        <label for="amount">จำนวณผู้เดินทาง:</label>
+        <input type="number" size="5"><br>
+        <label>เน้นการทองเทียวแบบไหน</label><br>
+        <input type="checkbox" ><label>ชอปปิ้ง</label><br>
+        <input type="checkbox" ><label>ธรรมชาติ</label><br>
+        <input type="checkbox" ><label>ทะเล</label>
+    </form>
+    <label for="">ยอมรับเงื่อนไขและชองตกลง</label>
+    <input type="radio" name="" id=""><label for="">I agree</label>
+    <input type="radio" name="" id=""><label for="">I disagree</label>
+    <input type="submit" value="จอง">
+</body>
+</html>
