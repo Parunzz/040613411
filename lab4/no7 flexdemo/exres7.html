@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<style>
+		/* Reset default margin and padding */
+		
+
+		/* Apply semantic layout */
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.menu {
+			background-color: black;
+			color: white;
+			text-align: center;
+			flex-basis: 25%;
+			
+		}
+
+		.content {
+			background-color: gainsboro;
+			flex-basis: 25%;
+			
+		}
+
+		.ads {
+			background-color: cornflowerblue;
+			flex-basis: 25%;
+			
+		}
+
+		@media (max-width: 600px) {
+			.flex {
+				flex-direction: column;
+			}
+
+			.menu,
+			.content,
+			.ads {
+				width: 100%;
+				flex-basis: auto;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="flex">
+		<div class="menu">Menu1<br>Menu2<br>Menu3<br></div>
+		<div class="content">In publishing, art, and communication, … as speech, writing or any of various arts".</div>
+		<div class="ads">advertising<br>advertising<br>advertising<br></div>
+	</div>
+</body>
+
+</html>
