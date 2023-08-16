@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false,
+                getmoney: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true,
+                getmoney: false
+            }
+        ]
+        let d = new Date()
+        function checkStd(student) {
+            for(let i in student){
+                if(student[i].gpa >= 3.2)
+                {
+                    console.log(student[i].fullname+'เกิดเมื่อปี '+((d.getFullYear()+543)-student[i].age)+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                    student[i].getmoney = true;
+                }
+                else if(student[i].year >= 2 && student[i].gpa>=2.75 && student[i].help == true)
+                {
+                    console.log(student[i].fullname+'เกิดเมื่อปี '+((d.getFullYear()+543)-student[i].age)+' ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                    student[i].getmoney = true;
+                    return true;
+                }
+                else{
+                    console.log(student[i].fullname+'เกิดเมื่อปี '+((d.getFullYear()+543)-student[i].age)+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา')
+
+                }
+            }
+        }
+        function All_student(student) {
+            for(let i in student){
+                console.log()
+            }
+        }
+        checkStd(student)
+        
+        // console.log('วันนี้ : '+d.getDate()+'/'+(d.getMonth()+1)+'/'+(d.getFullYear()+543))
+        // console.log('เวลา : '+d.getHours()+':'+d.getMinutes()+' น.')
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

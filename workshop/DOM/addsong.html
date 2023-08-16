@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addSong() {
+        var textInput = document.getElementById("songTextInput");
+        var songName = textInput.value;
+        var li = document.createElement("li");
+        li.innerHTML = songName;
+        var ul = document.getElementById("playlist");
+        ul.appendChild(li);
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="songTextInput">
+        <input type="button" id="addButton" value="Add Song" onclick="addSong()">
+        </form>
+        <ul id="playlist">
+        </ul>
+</body>
+</html>
