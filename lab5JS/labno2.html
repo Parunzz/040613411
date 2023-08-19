@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            let input1 = document.getElementById("input1");
+            let input1Value = parseFloat(input1.value);
+            
+            let input2 = document.getElementById("input2");
+            let input2Value = parseFloat(input2.value);
+
+            let dropdown = document.getElementById("dropdown");
+            let dropdownV = dropdown.value;
+            let ans = document.getElementById("ans");
+            let ansValue;
+
+            console.log(dropdownV);
+            if(dropdownV == '+'){
+                ansValue = (input1Value + input2Value);
+            }
+            else if(dropdownV == '-'){
+                ansValue = (input1Value - input2Value);
+            }
+            else if(dropdownV == '*'){
+                ansValue = (input1Value * input2Value);
+            }
+            else if(dropdownV == '/'){
+                ansValue = (input1Value / input2Value);
+            }
+
+            ans.value = ansValue;
+        }
+    </script>
+</head>
+<body>
+    <input type="input" style="width: 5%;" id="input1">
+    <select id="dropdown">
+        <option value="">Select</option>
+        <option id="option1" value="+">+</option>
+        <option id="option2" value="-">-</option>
+        <option id="option3" value="*">*</option>
+        <option id="option4" value="/">/</option>
+    </select>
+    <input type="input" style="width: 5%;" id="input2">=
+    <input type="input" style="width: 5%;" id="ans">
+    <input type="button" value="Go Go" style="text-align: center;" id="bt" onclick="add()">
+</body>
+</html>

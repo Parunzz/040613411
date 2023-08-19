@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    
+    <script>
+        var size = 14; // ประกาศตัวแปรไว้ใช้ร่วมกัน ใช้เก็บขนาดที่เพิ่มหรือลด
+        let p = document.getElementById("p1");
+        function decrease() {
+            // เพิ่มโค้ดที่นี่
+            size -= 2;
+            p.style.fontSize = size + "px";
+            console.log("-")
+            
+        }
+        function increase() {
+            // เพิ่มโค้ดที่นี่
+            size += 2;
+            p.style.fontSize = size + "px";
+            console.log("+")
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            p = document.getElementById("p1"); // Get the p1 element
+        });
+    </script>
+    
+</head>
+
+<body>
+    <h1>
+        <span onclick="decrease()">-</span> |
+        <span onclick="increase()">+</span>
+    </h1>
+    <p id="p1">
+        If you're leavin', will you take me with you? I'm
+        tired of talkin' on my phone There is one thing I can
+        never give you My heart will never be your home
+    </p>
+</body>
+
+</html>
