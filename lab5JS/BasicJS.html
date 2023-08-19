@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายไม่ตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 2.40,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false,
+                getmoney: false
+            },
+            {
+                fullname: 'นายไม่ส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 1.00,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายส่งงาน ตลอด',
+                age: 19,
+                year: 2,
+                gpa: 3.80,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายสดไสย ตลอดมา',
+                age: 22,
+                year: 4,
+                gpa: 1.00,
+                help: false,
+                getmoney: false
+            },
+            {
+                fullname: 'นายสดไส ตลอด',
+                age: 21,
+                year: 4,
+                gpa: 1.00,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นายสดไส เกิน',
+                age: 21,
+                year: 4,
+                gpa: 2.80,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true,
+                getmoney: false
+            },
+            {
+                fullname: 'นางสาวสวย งาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: false,
+                getmoney: false
+            }
+        ]
+        let d = new Date()
+        function checkStd(SArr) {
+            for(let i in SArr){
+                if(SArr[i].gpa >= 3.2)
+                {
+                    console.log(SArr[i].fullname+' เกิดเมื่อปี '+((d.getFullYear()+543)-SArr[i].age)+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                    SArr[i].getmoney = true;
+                }
+                else if(SArr[i].year >= 2 && SArr[i].gpa>=2.75 && SArr[i].help == true)
+                {
+                    console.log(SArr[i].fullname+' เกิดเมื่อปี '+((d.getFullYear()+543)-SArr[i].age)+' ได้รับทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                    SArr[i].getmoney = true;
+                }
+                else{
+                    if(SArr[i].help == true)
+                        console.log(SArr[i].fullname+' เกิดเมื่อปี '+((d.getFullYear()+543)-SArr[i].age)+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์')
+                    else
+                        console.log(SArr[i].fullname+' เกิดเมื่อปี '+((d.getFullYear()+543)-SArr[i].age)+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ และยังไม่ได้ช่วยงานภาควิชา')
+
+                }
+            }
+        }
+        let Y1 = [];
+        let Y2 = [];
+        let Y3 = [];
+        let Y4 = [];
+
+        function All_student(student) {
+            for(let i in student){
+                if(student[i].year == 1){
+                    Y1.push(student[i]);
+                }
+                else if(student[i].year == 2){
+                    Y2.push(student[i]);
+                }
+                else if(student[i].year == 3){
+                    Y3.push(student[i]);
+                }
+                else if(student[i].year == 4){
+                    Y4.push(student[i]);
+                }
+            }
+        }
+        All_student(student)
+
+        function printYear(Arr,Y) {
+            console.log("ชั้นปีที่ "+Y);
+            checkStd(Arr);
+        }
+        printYear(Y1,1);
+        printYear(Y2,2);
+        printYear(Y3,3);
+        printYear(Y4,4);
+        
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

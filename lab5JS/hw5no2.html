@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green-text {
+            color: green;
+        }
+    </style>
+    <script>
+        
+        function checkinput(inputElement) {
+            let inputValue = inputElement.value;
+            
+            if (inputValue !== '') {
+                inputElement.classList.add("green-text");
+            } else {
+                inputElement.classList.remove("green-text");
+            }
+        }
+        checkinput();
+    </script>
+</head>
+<body>
+    Name:<input type="input" id="name" onblur="checkinput(this)"><br>
+    Age:<input type="input" id="age" onblur="checkinput(this)"><br>
+    Birthdate:<input type="input" id="bd" onblur="checkinput(this)"><br>
+</body>
+</html>

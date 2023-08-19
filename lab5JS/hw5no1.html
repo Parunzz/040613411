@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script>
+        function checkPassword() {
+            // เพิมการทํางานที ่ นี่ ่
+            let pass1 = document.getElementById("pass1")
+            let pass1value = pass1.value;
+            let pass2 = document.getElementById("pass2")
+            let pass2value = pass2.value;
+
+            let messageDiv = document.getElementById("errormsg");
+            let newdiv = document.createElement("div");
+
+            if (pass1value === "" || pass2value === "") {
+                newdiv.innerHTML = "Please enter both passwords!";
+                newdiv.style.color = "red";
+            }
+            else if(pass1value === pass2value){
+                newdiv.innerHTML = "Correct";
+                newdiv.style.color = "green";
+            }
+            else{
+                newdiv.innerHTML = "Incorrect";
+                newdiv.style.color = "red";
+            }
+
+            messageDiv.innerHTML = '';
+            messageDiv.appendChild(newdiv);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Register</h1>
+    Username: <input type="text"><br>
+    Password: <input type="text" id="pass1"><br>
+    Re-type Password: <input type="text" id="pass2"><br>
+    <input type="submit" onclick="checkPassword()">
+    <div id="errormsg"></div>
+</body>
+
+</html>
