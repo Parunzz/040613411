@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #submit{
+            background-color: white;
+            color: black;
+        }
+        input:valid{
+            background-color: green;
+            color: white;
+        }
+        input:invalid{
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <script>
+
+        function add() {
+            let input1 = document.getElementById("in1");
+            let input2 = document.getElementById("in2");
+            let Info = document.getElementById("INFO");
+
+            let text1 = input1.value;
+            let text2 = input2.value;
+
+            let liElement1 = document.createElement("li");
+            let liElement2 = document.createElement("li");
+            let OlElement = document.createElement("ol");
+
+            liElement1.innerHTML = text1;
+            liElement2.innerHTML = text2;
+
+            OlElement.appendChild(liElement1);
+            OlElement.appendChild(liElement2);
+            Info.appendChild(OlElement);
+
+        }
+
+        window.onload = function(){
+            let submitBT = document.getElementById('submit');
+            submitBT.onclick = add;
+        }
+    </script>
+</head>
+<body>
+    <form method="get">
+        2.1 <input type="text" pattern="[Cc][Ss]\d{5}" id="in1"><br>
+        2.2 <input type="text" pattern="[A-Z]{2}[0-9]{2,3}[A-Z0-9. \bก-๙]*" id="in2"><br>
+        
+        <input id="submit" type="button" value="Submit">
+    </form>
+    <div id="INFO">
+
+    </div>
+</body>
+</html>
