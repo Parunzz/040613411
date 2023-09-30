@@ -8,7 +8,7 @@
 <html>
 <head><meta charset="utf-8"></head>
 <body>
-<form action="editformSQL.php" method="post">
+<form action="editformSQL.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?=$row["id"]?>">
     username : <input type="text" name="username" value="<?=$row["username"]?>"><br>
     password : <input type="text" name="password" value="<?=$row["password"]?>"><br>
@@ -16,7 +16,9 @@
     address : <input type="text" name="address" value="<?=$row["address"]?>"><br>
     mobile : <input type="text" name="mobile" value="<?=$row["mobile"]?>"><br>
     email : <input type="text" name="email" value="<?=$row["email"]?>"><br>
-    <input type="submit" value="edit ">
+    <label for="img">Select image:</label>
+    <input type="file" name="img" accept="image/*"><br>
+    <input type="submit" name="submit"value="edit ">
 </form>
 </body>
 </html>
