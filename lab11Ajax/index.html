@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function send() {
+        request = new XMLHttpRequest();
+        request.onreadystatechange = showResult;
+        var keyword = document.getElementById("keyword").value;
+        var url= "search.php?keyword=" + keyword;
+        request.open("GET", url, true);
+        request.send(null);
+        }
+        function showResult() {
+            if (request.readyState == 4) {
+                if (request.status == 200)
+                    document.getElementById("result").innerHTML = request.responseText;
+                }
+        }
+        </script>
+</head>
+<body>
+    Search <input type="text" name="keyword" id="keyword" onkeyup="send()"> <br>
+    <div id="result"></div>
+</body>
+</html>
